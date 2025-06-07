@@ -42,7 +42,7 @@ UNIX 系 OS を前提として採点するため、Windows の方は [WSL2](http
 5. (※**[アルゴリズム課題](./README.md#2-アルゴリズム課題) 完了後に実施してください**) poetry の「開発(dev)」依存ライブラリとして `black` を追加し、実行してください。また、実行結果を `black-exec.log` という名前のファイルにリダイレクトしてください。問題 3 同様、標準出力と標準エラー出力の両方をリダイレクトしてください。
 
 コマンド:
-{ここに記入してください}
+{`poetry add --dev black && poetry run black . > black-exec.log 2>&1`}
 
 **注: `black-exec.log` はこのリポジトリに含めてください。**
 

@@ -2,6 +2,7 @@ import os
 import numpy as np
 import matplotlib.pyplot as plt
 
+
 def visualize_point_cloud(file_path: str, output_image_path: str) -> None:
     """
     可視化用に点群データ（x, y, z, R, G, B）を読み込み、3Dプロットとして保存・表示する・
@@ -31,6 +32,7 @@ def visualize_point_cloud(file_path: str, output_image_path: str) -> None:
     plt.tight_layout()
     plt.savefig(output_image_path, dpi=300)
     plt.show()
+
 
 base_dir = os.path.dirname(os.path.abspath(__file__))
 root = os.path.abspath(os.path.join(base_dir, "../../"))

@@ -11,8 +11,7 @@ UNIX 系 OS を前提として採点するため、Windows の方は [WSL2](http
 1. [アルゴリズム課題](./README.md#2-アルゴリズム課題) で使用するテキスト形式の点群データ (`会議室1_19_53_16.txt`) の行数をコマンドラインを使って調べてください。
 
 コマンド:
-{
-`wc -l data/会議室1_19_53_16.txt`}
+{`wc -l data/会議室1_19_53_16.txt`}
 
 答え:
 {582833}
@@ -33,7 +32,7 @@ UNIX 系 OS を前提として採点するため、Windows の方は [WSL2](http
 4. [アルゴリズム課題](./README.md#2-アルゴリズム課題) で実装したスクリプトの実行結果（Python 側で何かしら `print` するようにしてください）を、`exec.log` という名前のファイルにリダイレクトしてください。この時、error や warning も含めて捕捉するために、標準出力と標準エラー出力の両方をリダイレクトしてください。
 
 コマンド:
-{`python src\myproject\main.py > exec.log 2>$1`}
+{`python src/myproject/main.py > exec.log 2>$1`}
 
 
 **注: `exec.log` はこのリポジトリに含めてください。**

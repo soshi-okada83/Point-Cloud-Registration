@@ -51,7 +51,11 @@ UNIX 系 OS を前提として採点するため、Windows の方は [WSL2](http
 **また、2. で作成した `data/` ディレクトリがビルド時に含まれないよう、2. の `.gitignore` と同じ内容の変更を `.dockerignore` にも追記した上で実施してください。**
 
 コマンド:
-{ここに記入してください}
+{```bash
+cd myproject
+sudo docker build -t icp-app .
+sudo docker run --rm -v $(pwd)/../data:/code/data icp-app
+```}
 
 
 7. (※**[アルゴリズム課題](./README.md#2-アルゴリズム課題) 完了後に実施してください**)最終的に収束した際のRMSEを記載してください。

@@ -5,7 +5,14 @@ FROM python:3.10.14-bullseye
 # FROM python:3.9.19-bullseye
 # FROM python:3.8.19-bullseye
 
-RUN pip install poetry
+# 古いpoetryが入っている可能性があり、build時にpoetry exportが出来ずエラーになる
+# RUN pip install poetry
+
+# Poetry 1.7.1 を明示的にインストールし、PATH を通す
+ENV POETRY_VERSION=1.7.1
+RUN curl -sSL https://install.python-poetry.org | python3 - && \
+    ln -s /root/.local/bin/poetry /usr/local/bin/poetry
+
 RUN poetry config virtualenvs.create false
 
 WORKDIR /code

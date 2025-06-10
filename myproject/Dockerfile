@@ -8,7 +8,7 @@ FROM python:3.10.14-bullseye
 # 古いpoetryが入っている可能性があり、build時にpoetry exportが出来ずエラーになる
 # RUN pip install poetry
 
-# Poetry 1.7.1 を明示的にインストールし、PATH を通す
+# Poetry 1.7.1 を明示的にインストール
 ENV POETRY_VERSION=1.7.1
 RUN curl -sSL https://install.python-poetry.org | python3 - && \
     ln -s /root/.local/bin/poetry /usr/local/bin/poetry
